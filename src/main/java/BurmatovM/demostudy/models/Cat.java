@@ -1,7 +1,5 @@
 package BurmatovM.demostudy.models;
 
-import java.awt.*;
-
 public class Cat {
     private int id;
     private String owner;
@@ -35,7 +33,6 @@ public class Cat {
 
     private String descr;
     private String imageString;
-    private Image image;
     private int isBuy;
 
     public int getId() {
@@ -68,14 +65,6 @@ public class Cat {
 
     public void setImageString(String imageString) {
         this.imageString = imageString;
-    }
-
-    public Image getImage() {
-        return image;
-    }
-
-    public void setImage(Image image) {
-        this.image = image;
     }
 
     public int isBuy() {

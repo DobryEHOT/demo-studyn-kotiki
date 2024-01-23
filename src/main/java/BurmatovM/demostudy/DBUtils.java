@@ -11,7 +11,7 @@ public class DBUtils {
 
         try{
 
-            String url = "jdbc:mysql://130.193.52.73:3306/javaDB";
+            String url = "jdbc:mysql://51.250.108.9:3306/javaDB";
             Connection connection = DriverManager.getConnection(url,"monty","some_pass");
             Statement statement = connection.createStatement();
             statement.execute("""
@@ -41,7 +41,7 @@ public class DBUtils {
     public static void addCat(Cat cat) throws SQLException {
 
         try{
-            String url = "jdbc:mysql://130.193.52.73:3306/javaDB";
+            String url = "jdbc:mysql://51.250.108.9:3306/javaDB";
             Connection connection = DriverManager.getConnection(url,"monty","some_pass");
 
             Statement statement = connection.createStatement();
@@ -59,7 +59,7 @@ public class DBUtils {
     public static ArrayList<Cat> requestAllCats() throws SQLException {
         var result = new ArrayList<Cat>();
         try{
-            String url = "jdbc:mysql://130.193.52.73:3306/javaDB";
+            String url = "jdbc:mysql://51.250.108.9:3306/javaDB";
             Connection connection = DriverManager.getConnection(url,"monty","some_pass");
 
             Statement statement = connection.createStatement();
@@ -91,7 +91,7 @@ public class DBUtils {
     public static void buyCat(Cat cat) throws SQLException {
 
         try{
-            String url = "jdbc:mysql://130.193.52.73:3306/javaDB";
+            String url = "jdbc:mysql://51.250.108.9:3306/javaDB";
             Connection connection = DriverManager.getConnection(url,"monty","some_pass");
 
             Statement statement = connection.createStatement();
@@ -109,7 +109,7 @@ public class DBUtils {
     public static void buyCat(int id) throws SQLException {
 
         try{
-            String url = "jdbc:mysql://130.193.52.73:3306/javaDB";
+            String url = "jdbc:mysql://51.250.108.9:3306/javaDB";
             Connection connection = DriverManager.getConnection(url,"monty","some_pass");
 
             Statement statement = connection.createStatement();
@@ -127,7 +127,7 @@ public class DBUtils {
     public static void sellCat(Cat cat) throws SQLException {
 
         try{
-            String url = "jdbc:mysql://130.193.52.73:3306/javaDB";
+            String url = "jdbc:mysql://51.250.108.9:3306/javaDB";
             Connection connection = DriverManager.getConnection(url,"monty","some_pass");
 
             Statement statement = connection.createStatement();

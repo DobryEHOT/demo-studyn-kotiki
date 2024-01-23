@@ -17,7 +17,7 @@ import static BurmatovM.demostudy.DBUtils.*;
 public class DemoStudyApplication  {
 
 	public static void main(String[] args) throws SQLException, ClassNotFoundException {
-		Class.forName ("com.mysql.cj.jdbc.Driver");
+		//Class.forName ("com.mysql.cj.jdbc.Driver");
 
 		//addCat(new Cat(0,"Michael","Mark","Best Cat","0", 0));
 		//addCat(new Cat(0,"Igor","Vitaliy","Bigger","0", 0));

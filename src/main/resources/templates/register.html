@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+</head>
+<body>
+<main class="w-100 m-auto" style="max-width: 330px;padding: 1rem;">
+<form data-th-action="@{/register/try}" method="post">
+    <h1 class="h3 mb-3 fw-normal">Регистрация</h1>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Login</span>
+        <input type="text" class="form-control" placeholder="Имя пользователя" aria-label="Имя пользователя" aria-describedby="basic-addon1" name="login" id="login" data-th-value="${RegisterDTO}?${RegisterDTO.login}:''">
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon2">Paswd</span>
+        <input type="text" class="form-control" placeholder="Пароль" aria-label="Пароль" aria-describedby="basic-addon2" name="password" id="password">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Регистрация</button>
+</form>
+</main>
+
+
+
+<main class="w-100 m-auto" style="max-width: 330px;padding: 1rem;">
+    <form data-th-action="@{/register/try}" method="post">
+        <h1 class="h3 mb-3 fw-normal">Регистрация</h1>
+
+        <div class="form-floating">
+            <input type="text" class="form-control" id="login" name="login" data-th-value="${RegisterDTO}?${RegisterDTO.login}:''">
+            <label for="username">Имя пользователя</label>
+            <div
+                    class="alert alert-warning"
+                    data-th-if="${RegisterDTO}?${#fields.hasErrors('RegisterDTO.login')}"
+                    data-th-text="${RegisterDTO}?${#fields.errors('RegisterDTO.login')}"
+            ></div>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="password" name="password">
+            <label for="password">Пароль</label>
+            <div
+                    class="alert alert-warning"
+                    data-th-if="${RegisterDTO}?${#fields.hasErrors('RegisterDTO.password')}"
+                    data-th-each="err : ${RegisterDTO}?${#fields.errors('RegisterDTO.password')}"
+                    data-th-text="${err}"
+            ></div>
+        </div>
+        <button class="btn btn-primary w-100 py-2" type="submit">Зарегистрироваться</button>
+        <p class="mt-5 mb-3 text-body-secondary">© 2023</p>
+    </form>
+</main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+</html>
